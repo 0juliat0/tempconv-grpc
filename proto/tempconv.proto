@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package tempconv;
+
+// Request message for temperature input
+message TempRequest {
+  double value = 1;
+}
+
+// Response message for converted temperature
+message TempResponse {
+  double value = 1;
+}
+
+// Temperature conversion service
+service TempConvService {
+  rpc C2F (TempRequest) returns (TempResponse);
+  rpc F2C (TempRequest) returns (TempResponse);
+}
