@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package tempconv;
+option go_package = "tempconv-grpc/backend/gen/tempconv";
 
 // Request message for temperature input
 message TempRequest {
